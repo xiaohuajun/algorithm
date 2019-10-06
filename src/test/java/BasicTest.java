@@ -1,3 +1,5 @@
+import org.junit.Test;
+
 /**
  * @author Danny.
  * @version 1.0
@@ -7,4 +9,9 @@
 public class BasicTest {
 
 
+    @Test
+    public void test(){
+
+
+    }
 }
