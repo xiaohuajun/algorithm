@@ -1,4 +1,4 @@
-package list;
+package datastructure.list;
 
 /**
  * @author Danny.
@@ -9,6 +9,7 @@ package list;
 public class Node {
 
     public int value;
+
     public Node next;
 
     public Node(int data) {
