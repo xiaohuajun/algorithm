@@ -22,9 +22,10 @@ public class TopkHighFrequency {
     public static List<Integer> topKHighFrequency(int[] arr, int k) {
         int len = arr.length;
         if (len == 0) {
-            throw new IllegalArgumentException("parameter is null");
+            throw new IllegalArgumentException("array is empty");
         }
         List<Integer> res = new ArrayList<>();
+        //hash表存储每个元素出现的次数
         Map<Integer, Integer> countMap = new HashMap<>(16);
         for (int i : arr) {
             if (countMap.containsKey(i)) {

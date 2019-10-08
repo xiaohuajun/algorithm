@@ -17,10 +17,10 @@ public class QuickSort {
     /**
      * 面对大量的重复元素，还有改进的空间
      *
-     * @param a
-     * @param l
-     * @param r
-     * @return
+     * @param a 排序数组
+     * @param l 数组的左边界
+     * @param r 数组的右边界
+     * @return 排序后的数组
      */
     public static int[] quickSort(int[] a, int l, int r) {
         long sTime = System.currentTimeMillis();
@@ -32,12 +32,12 @@ public class QuickSort {
         //选择一个基准值
         int key = a[l];
         while (i < j) {
-            //从右往左找到第一个小于key的元素
+            //从右往左找到第一个小于key的元素--a[j] < key
             while (i < j && a[j] >= key) {
                 j--;
             }
             if (i < j) {
-                //把找到的数放在左边,并移动左边的指针
+                //把找到的数(a[j])放到左边,并移动左边的指针-i++
                 a[i] = a[j];
                 i++;
             }
@@ -46,12 +46,13 @@ public class QuickSort {
                 i++;
             }
             if (i < j) {
-                //把找到的数放在右边，并移动右边的指针
+                //把找到的数放在右边，并移动右边的指针-j--
                 a[j] = a[i];
                 j--;
             }
         }
-        //因为以上操作已经，把小于key的元素已经放到i-1处，所以当以上操作结束时，应该key放在i处
+        //因为以上操作已经，把小于key的元素已经放到i-1处，
+        //所以当以上操作结束时，应该key放在i处
         a[i] = key;
         //递归的调用，进行partition，把左右两个子数组进行排序
         //左子数组
@@ -76,10 +77,10 @@ public class QuickSort {
      * 不要让重复元素进入递归子数组，
      * 把等于切分元素的元素归位
      *
-     * @param a
-     * @param l
-     * @param r
-     * @return
+     * @param a 需要排序的数组
+     * @param l 数组的左边界
+     * @param r 数组的右边界
+     * @return 排序后数组
      */
     public static int[] quickSortThreePart(int[] a, int l, int r) {
         long sTime = System.currentTimeMillis();
@@ -90,7 +91,7 @@ public class QuickSort {
         int lt = l;
         int i = l + 1;
         int gt = r;
-        //切分基准值
+        //切分的基准值
         int v = a[l];
         while (i <= gt) {
             if (a[i] < v) {

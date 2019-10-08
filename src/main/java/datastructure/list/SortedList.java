@@ -26,7 +26,7 @@ public class SortedList {
         Node newNode = new Node(v);
         Node pre = null;
         Node curr = first;
-        //找到第一个比v大的节点
+        //找到第一个数值比v大的节点
         while (curr != null && curr.value < v) {
             pre = curr;
             curr = curr.next;

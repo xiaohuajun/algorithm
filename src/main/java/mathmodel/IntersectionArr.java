@@ -36,7 +36,6 @@ public class IntersectionArr {
         for (Integer integer : integers) {
             resArr[k++] = integer;
         }
-
         return resArr;
     }
 

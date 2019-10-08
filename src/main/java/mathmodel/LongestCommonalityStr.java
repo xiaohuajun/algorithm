@@ -14,9 +14,10 @@ public class LongestCommonalityStr {
 
     /**
      * 求两个字符串最长公共的子序列
-     * @param s1
-     * @param s2
-     * @return
+     *
+     * @param s1 字符串1
+     * @param s2 字符串2
+     * @return 两个字符串的最长公共子序列（不需要连续）
      */
     public static int[][] getLcs(String s1, String s2) {
         int len1 = s1.length();
