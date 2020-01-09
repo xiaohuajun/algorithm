@@ -26,6 +26,7 @@ public class IntersectionArr {
             countMap.put(j, (value == null ? 0 : value) + 1);
         }
         for (int i : b) {
+
             if (countMap.containsKey(i) && countMap.get(i) != 0) {
                 integers.add(i);
                 countMap.put(i, countMap.get(i) - 1);
