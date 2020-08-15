@@ -91,7 +91,6 @@ public class WordLadder {
     WordLadder solution = new WordLadder();
     int res = solution.ladderLength(beginWord, endWord, wordList);
     System.out.println(res);
-
   }
 
 }
