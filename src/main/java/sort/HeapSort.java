@@ -1,6 +1,7 @@
 package sort;
 
 import java.util.Arrays;
+import java.util.PriorityQueue;
 
 /**
  * @author Danny.
@@ -48,12 +49,12 @@ public class HeapSort {
      * 构建一个最小堆
      *
      * @param a 堆元素
-     * @param n 节点总数
+     * @param k 节点总数-构建堆的大小
      */
-    public static void makeMinHeap(int[] a, int n) {
+    public static void makeMinHeap(int[] a, int k) {
         //从根节点构造最小堆
-        for (int i = (n - 1) / 2; i >= 0; i--) {
-            adjustHeap(a, i, n);
+        for (int i = (k - 1) / 2; i >= 0; i--) {
+            adjustHeap(a, i, k);
         }
     }
 
@@ -64,8 +65,8 @@ public class HeapSort {
      * 3、小于子节点的直接点抛弃，大于子节点的
      *
      * @param a 数组
-     * @param i 节点的索引
-     * @param n 总结点
+     * @param i 当前节点的索引
+     * @param n 总结点-堆的大小
      */
     private static void adjustHeap(int[] a, int i, int n) {
         //定义左子结点的索引
@@ -150,5 +151,6 @@ public class HeapSort {
         System.out.println(Arrays.toString(arr));
 //        System.out.println("===========topN=======");
 //        System.out.println(Arrays.toString(topN(arr, 5)));
+
     }
 }
